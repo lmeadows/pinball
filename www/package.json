@@ -25,6 +25,9 @@
   "bugs": {
     "url": "https://github.com/rustwasm/create-wasm-app/issues"
   },
+  "dependencies": {
+    "pinball": "file:../pkg"
+  },
   "homepage": "https://github.com/rustwasm/create-wasm-app#readme",
   "devDependencies": {
     "hello-wasm-pack": "^0.1.0",

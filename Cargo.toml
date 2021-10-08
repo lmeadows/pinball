@@ -11,7 +11,9 @@ crate-type = ["cdylib", "rlib"]
 default = ["console_error_panic_hook"]
 
 [dependencies]
-wasm-bindgen = "0.2.63"
+wasm-bindgen = "0.2.78"
+gloo = "0.3.0"
+js-sys = "0.3.55"
 
 # The `console_error_panic_hook` crate provides better debugging of panics by
 # logging them with `console.error`. This is great for development, but requires
@@ -25,6 +27,28 @@ console_error_panic_hook = { version = "0.1.6", optional = true }
 #
 # Unfortunately, `wee_alloc` requires nightly Rust when targeting wasm for now.
 wee_alloc = { version = "0.4.5", optional = true }
+
+[dependencies.web-sys]
+version = "0.3.20"
+features = [
+  'AudioContext',
+  'AudioBuffer',
+  'AudioNode',
+  'AudioBufferSourceNode',
+  'AudioDestinationNode',
+  'Document',
+  'Element',
+  'HtmlCanvasElement',
+  'KeyboardEvent',
+  'Node',
+  'WebGlBuffer',
+  'WebGlRenderingContext',
+  'WebGlProgram',
+  'WebGlShader',
+  'WebGlUniformLocation',
+  'WebGlTexture',
+  'Window',
+]
 
 [dev-dependencies]
 wasm-bindgen-test = "0.3.13"
